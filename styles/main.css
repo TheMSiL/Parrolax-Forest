@@ -2,69 +2,80 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+}
 
 @font-face {
   font-family: raleway_f;
-  src: url("../fonts/raleway-regular.woff2"); }
+  src: url("../fonts/raleway-regular.woff2");
+}
 @font-face {
   font-family: raleway_f;
   src: url("../fonts/raleway-black.woff2");
-  font-weight: 900; }
+  font-weight: 900;
+}
 body {
   background-color: #010101;
   font-family: raleway_f, sens-serif;
-  line-height: 1.55; }
+  line-height: 1.55;
+}
 
 .main {
-  position: relative; }
-  .main::after {
-    content: "";
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: calc( calc(1vw + 1vh) * 10 );
-    background-image: url("../img/ground.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    bottom: calc( calc(1vw + 1vh) * -4.5); }
-  .main .layers {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    position: relative; }
-  .main .layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    z-index: 2;
-    will-change: transform;
-    -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1); }
-  .main .layers-base {
-    -webkit-transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-            transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-    z-index: 0; }
-  .main .layers-middle {
-    -webkit-transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-            transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0); }
-  .main .layers-front {
-    -webkit-transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
-            transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0); }
+  position: relative;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: calc( calc(1vw + 1vh) * 10 );
+  background-image: url("../img/ground.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: calc( calc(1vw + 1vh) * -4.5);
+}
+.main .layers {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.main .layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+}
+.main .layers-base {
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 0;
+}
+.main .layers-middle {
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+.main .layers-front {
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
 
 .layer-main {
   z-index: 1;
@@ -78,14 +89,17 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   color: #e7e7e0;
-  text-shadow: 0 0 15px #9e7d35; }
-  .layer-main .layer-title {
-    font-size: calc(calc(1vw + 1vh) * 2.5 );
-    letter-spacing: calc(calc(1vw + 1vh) / 2.25 ); }
-  .layer-main .layer-caption {
-    font-size: calc(calc(1vw + 1vh) / 1.2 );
-    letter-spacing: calc(calc(1vw + 1vh) / 3.5 );
-    margin-top: calc(calc(1vw + 1vh) * -.75 ); }
+  text-shadow: 0 0 15px #9e7d35;
+}
+.layer-main .layer-title {
+  font-size: calc(calc(1vw + 1vh) * 2.5 );
+  letter-spacing: calc(calc(1vw + 1vh) / 2.25 );
+}
+.layer-main .layer-caption {
+  font-size: calc(calc(1vw + 1vh) / 1.2 );
+  letter-spacing: calc(calc(1vw + 1vh) / 3.5 );
+  margin-top: calc(calc(1vw + 1vh) * -.75 );
+}
 
 .dungeon {
   min-height: 100vh;
@@ -103,35 +117,40 @@ body {
           align-items: center;
   text-align: center;
   top: -1px;
-  z-index: 10; }
-  .dungeon .dungeon-title {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: calc(calc(1vw + 1vh) * 1.8);
-    letter-spacing: calc(calc(1vw + 1vh) / 7.5 );
-    -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-            transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-    -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    will-change: transform; }
-  .dungeon .dungeon-text {
-    max-width: calc(calc(1vw + 1vh) * 30);
-    text-align: justify;
-    font-size: calc(calc(1vw + 1vh) * .9 );
-    margin-top: calc(calc(1vw + 1vh) / 1.25 );
-    -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-            transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-    -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
-    will-change: transform; }
-    .dungeon .dungeon-text > span {
-      display: block;
-      margin-top: calc(1vw + 1vh);
-      font-size: calc(calc(1vw + 1vh) * .9 ); }
+  z-index: 10;
+}
+.dungeon .dungeon-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: calc(calc(1vw + 1vh) * 1.8);
+  letter-spacing: calc(calc(1vw + 1vh) / 7.5 );
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  will-change: transform;
+}
+.dungeon .dungeon-text {
+  max-width: calc(calc(1vw + 1vh) * 30);
+  text-align: justify;
+  font-size: calc(calc(1vw + 1vh) * .9 );
+  margin-top: calc(calc(1vw + 1vh) / 1.25 );
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  will-change: transform;
+}
+.dungeon .dungeon-text > span {
+  display: block;
+  margin-top: calc(1vw + 1vh);
+  font-size: calc(calc(1vw + 1vh) * .9 );
+}
 
 .content {
-  will-change: transfrom; }
+  will-change: transfrom;
+}
